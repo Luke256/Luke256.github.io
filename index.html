@@ -2,8 +2,52 @@
 <html>
     <head>
         <title>Luke</title>
+        <link rel="shortcut icon" href="images/icon.png">
+        <link rel="stylesheet" href="uikit-3.6.5/css/uikit.min.css">
+        <script src="uikit-3.6.5/js/uikit.min.js"></script>
+        <script src="uikit-3.6.5/js/uikit-icons.min.js"></script>
     </head>
     <body>
-        <center><h1>Luke</h1></center>
+
+        <div uk-scrollspy="cls: uk-animation-fade; delay: 500" class="uk-padding">
+
+            <div uk-sticky class="uk-text-center uk-heading-small" uk-scrollspy="cls:uk-animation-fade">
+                <span style="color:lightskyblue">Luke</span>
+            </div>
+            <div uk-grid class="uk-flex-center">
+                <div>
+                    <a href="https://twitter.com/Luke02561" class="uk-icon-button" uk-icon="twitter"></a>
+                </div>
+                <div>
+                    <a href="https://github.com/Luke256" class="uk-icon-button" uk-icon="github"></a>
+                </div>
+            </div>
+
+            <h2 class="uk-heading-divider">Useable Langages</h2>
+            <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+                <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
+                    <div class="uk-padding-small">
+                        <img data-src="images/cpp.png" width="75" height="75" alt="" uk-img>
+                    </div>
+                    <h2 class="uk-h2 uk-padding">C++</h2>
+                </div>
+
+                <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
+                    <div class="uk-padding-small">
+                        <img data-src="images/python.png" width="75" height="75" uk-img>
+                    </div>
+                    <h2 class="uk-h2 uk-padding">Python</h2>
+                </div>
+
+                <div uk-grid class="uk-margin uk-grid-collapse">
+                    <div class="uk-padding-small uk-card uk-card-default uk-margin-large-right">
+                        <img data-src="images/java.png" width="75" height="75" uk-img>
+                    </div>
+                    <div class="uk-padding-small uk-card uk-card-default uk-margin-large-right">
+                        <img data-src="images/js.jpeg" width="75" height="75" uk-img>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
