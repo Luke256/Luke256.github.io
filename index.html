@@ -12,20 +12,22 @@
     <body>
 
         <div uk-scrollspy="cls: uk-animation-fade; delay: 500" class="uk-padding">
+            <!--junp button-->
             <div uk-sticky class="uk-margin-top">
                 <button class="uk-button uk-button-default" type="button" uk-toggle="target: #navigation" style="padding-left: 10px; padding-right:10px;">
                     <span uk-icon="menu"></span>
                 </button>
             </div>
 
+            <!--header-->
             <div class="uk-text-center uk-heading-small uk-flex-center">
                 <span style="color:#555555">Luke</span>
                 <div uk-grid class="uk-flex-center">
-                    <div>
-                        <a href="https://twitter.com/Luke02561" class="uk-icon-button" uk-icon="twitter"></a>
+                    <div class="uk-animation-fade">
+                        <a href="https://twitter.com/Luke02561" class="uk-icon-button" uk-icon="twitter" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                     <div>
-                        <a href="https://github.com/Luke256" class="uk-icon-button" uk-icon="github"></a>
+                        <a href="https://github.com/Luke256" class="uk-icon-button" uk-icon="github" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                     <div class="uk-inline">
                         <button class="uk-button uk-button-default" type="button" style="padding-left: 10px; padding-right:10px;">
@@ -45,22 +47,33 @@
                 </div>
             </div>
 
+            <!-- about me -->
+            <h2 class="uk-heading-divider" id="aboutme">About Me</h2>
+            <div class="uk-card-default uk-padding-small" style="font-size: medium;">
+                <p class="uk-margin-auto-vertical">中学三年生。中学一年生からプログラミングを始め、現在はゲーム開発や機械学習、プログラミングを使った電子工作などを行っています。</p>
+            </div>
 
-                
+            <!--useable languages-->
             <h2 class="uk-heading-divider" id="useablelangages">Useable Langages</h2>
             <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
-                <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
-                    <div class="uk-padding-small">
-                        <img data-src="images/cpp.png" width="75" height="75" alt="" uk-img>
-                    </div>
-                    <h2 class="uk-h2 uk-padding">C++</h2>
-                </div>
-
                 <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
                     <div class="uk-padding-small">
                         <img data-src="images/python.png" width="75" height="75" uk-img>
                     </div>
                     <h2 class="uk-h2 uk-padding">Python</h2>
+                    <p class="uk-margin-auto-vertical uk-text-lead">
+                        機械学習・電子工作・Discord BOT
+                    </p>
+                </div>
+
+                <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
+                    <div class="uk-padding-small">
+                        <img data-src="images/cpp.png" width="75" height="75" alt="" uk-img>
+                    </div>
+                    <h2 class="uk-h2 uk-padding">C++</h2>
+                    <p class="uk-margin-auto-vertical uk-text-lead">
+                        ゲーム制作・競技プログラミング
+                    </p>
                 </div>
 
                 <div uk-grid class="uk-margin uk-grid-collapse">
@@ -73,29 +86,114 @@
                 </div>
             </div>
 
+            <!-- skills -->
             <h2 class="uk-heading-divider" id="skills">Skills</h2>
-            <table class="uk-table uk-table-divider uk-position-small">
-                <tbody>
-                    <tr class="uk-text-large">
-                        <td>AtCoder 緑色(812)</td>
-                    </tr>
-                    <tr class="uk-text-large">
-                        <td>第20回 日本情報オリンピック ランクB</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
+                <table class="uk-table uk-table-divider uk-position-small">
+                    <tbody>
+                        <tr class="uk-text-large">
+                            <td>AtCoder 緑色(812)</td>
+                        </tr>
+                        <tr class="uk-text-large">
+                            <td>第20回 日本情報オリンピック ランクB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- products -->
+            <h2 class="uk-heading-divider" id="products">Products</h2>
+            <div class="uk-margin-large-left" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500;">
+                <div uk-grid class="uk-grid-match">
+                    <a class="uk-card uk-card-default uk-padding-small uk-width-1-4 uk-link-reset uk-margin-left" href="#modal-ape-x" uk-toggle>
+                        <div class="uk-flex-center">
+                            <img data-src="images/Github-Mark.png" width="100%" alt="" uk-img>
+                        </div>
+                        <hr class="uk-divider-icon">
+                        <div class="uk-text-center uk-text-break">
+                            <h3 class=" uk-card-title">Ape-X</h3>
+                            <div>
+                                <span class="marker-lightblue">Python</span>
+                                <span class="marker-lightgreen">機械学習</span>
+                            </div>
+                            <span class=" uk-text-default">
+                                制作日時:2020年12月
+                            </span>
+                        </div>
+                        
+                    </a>
+                    
+                    <a class="uk-card uk-card-default uk-padding-small uk-width-1-4 uk-link-reset uk-margin-left" href="#modal-hit-blow" uk-toggle>
+                        <div class="uk-flex-center">
+                            <img data-src="images/Discord-Logo-Color.png" width="100%" alt="" uk-img>
+                        </div>
+                        <hr class="uk-divider-icon">
+                        <div class="uk-text-center uk-text-break">
+                            <h3 class=" uk-card-title">数あてBOT</h3>
+                            <div>
+                                <span class="marker-lightblue">Python</span>
+                                <span class="marker-lightgreen">Discord BOT</span>
+                            </div>
+                            <span class=" uk-text-default">
+                                制作日時:2020年9月
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- products' modals -->
+        <!-- ape-x -->
+        <div id="modal-ape-x" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div uk-grid class="uk-grid-collapse">
+                    <div class="uk-padding-small">
+                        <img data-src="images/Github-Mark.png" height="150" width="150" alt="" uk-img>
+                    </div>
+                    <div class="uk-text-break uk-width-2-3">
+                        <h3>Ape-X</h3>
+                        <a class="uk-link-reset marker-black" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://github.com/Luke256/Ape-X">GitHub</a>
+                        <p>強化学習の手法の一つ、「Ape-X」をKerasというフレームワークを使って実装してみました。</p>
+                        <p>ただ、成功しているわけではなく、まだまだ課題は多いです</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-
+        <!-- 数あてBOT -->
+        <div id="modal-hit-blow" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div uk-grid class="uk-grid-collapse">
+                    <div class="uk-padding-small">
+                        <img data-src="images/Discord-Logo-Color.png" height="150" width="150" alt="" uk-img>
+                    </div>
+                    <div class="uk-text-break uk-width-2-3">
+                        <h3>数あてBOT</h3>
+                        <a class="uk-link-reset marker-discord" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://discord.com/api/oauth2/authorize?client_id=750658652427255819&permissions=0&scope=bot">Discord</a>
+                        <p>Discord上で、「ヒットアンドブロー」というゲームのBOTを制作しました</p>
+                        <p>(稼働していない場合があります)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- manu bar -->
         <div id="navigation" uk-offcanvas="mode: reveal;">
-            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-columns">
                 <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li><a href="#aboutme" uk-scroll>About Me</a></li>
                     <li><a href="#useablelangages" uk-scroll>Useable Langages</a></li>
                     <li><a href="#skills" uk-scroll>Skills</a></li>
+                    <li><a href="#products" uk-scroll>Products</a></li>
                 </ul>
             </div>
         </div>
 
+        <!-- copy right -->
         <div class="uk-container uk-text-center">&copy;2021 Luke</div>
     </body>
 </html>
