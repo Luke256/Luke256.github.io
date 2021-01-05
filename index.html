@@ -12,6 +12,11 @@
     <body>
 
         <div uk-scrollspy="cls: uk-animation-fade; delay: 500" class="uk-padding">
+            <div uk-sticky class="uk-margin-top">
+                <button class="uk-button uk-button-default" type="button" uk-toggle="target: #navigation" style="padding-left: 10px; padding-right:10px;">
+                    <span uk-icon="menu"></span>
+                </button>
+            </div>
 
             <div class="uk-text-center uk-heading-small uk-flex-center">
                 <span style="color:#555555">Luke</span>
@@ -39,8 +44,10 @@
                     </div>
                 </div>
             </div>
+
+
                 
-            <h2 class="uk-heading-divider">Useable Langages</h2>
+            <h2 class="uk-heading-divider" id="useablelangages">Useable Langages</h2>
             <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
                 <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
                     <div class="uk-padding-small">
@@ -66,7 +73,7 @@
                 </div>
             </div>
 
-            <h2 class="uk-heading-divider">Skills</h2>
+            <h2 class="uk-heading-divider" id="skills">Skills</h2>
             <table class="uk-table uk-table-divider uk-position-small">
                 <tbody>
                     <tr class="uk-text-large">
@@ -78,6 +85,17 @@
                 </tbody>
             </table>
         </div>
+
+
+        <div id="navigation" uk-offcanvas="mode: reveal;">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li><a href="#useablelangages" uk-scroll>Useable Langages</a></li>
+                    <li><a href="#skills" uk-scroll>Skills</a></li>
+                </ul>
+            </div>
+        </div>
+
         <div class="uk-container uk-text-center">&copy;2021 Luke</div>
     </body>
 </html>
