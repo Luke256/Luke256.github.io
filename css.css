@@ -21,7 +21,7 @@ html{
 .marker-black{
     background-color:black;
     border-radius: 3px;
-    color: white !important;
+    color: white;
     padding: 3px;
 }
 
@@ -29,6 +29,14 @@ html{
     background-color: #7289DA;
     border-radius: 3px;
     color: white;
-    text-decoration:none !important;
+    text-decoration:none;
+    padding: 3px;
+}
+
+.marker-qiita{
+    background-color: #55C500;
+    border-radius: 3px;
+    color: white;
+    text-decoration:none;
     padding: 3px;
 }
