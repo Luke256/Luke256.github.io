@@ -1,7 +1,6 @@
 function Copy(id){
     var string=document.getElementById(id).textContent;
     navigator.clipboard.writeText(string);
-    alert("コピーしました")
 }
 
 
@@ -14,8 +13,6 @@ window.onload=function(){
         ["part3.html","変数の使い方"]
     ];
 
-    console.log(parent)
-
     for(var i=0;i<PageList.length;++i){
         var newelement=document.createElement("a");
         newelement.href=PageList[i][0];
@@ -25,5 +22,16 @@ window.onload=function(){
         var addelement=document.createElement("li");
         addelement.appendChild(newelement);
         parent.appendChild(addelement);
+    }
+
+    var codelist=document.getElementsByTagName("pre");
+    for(var i=0;i<codelist.length;++i){
+        var newelement=document.createElement("div");
+        newelement.classList.add("uk-text-center","uk-padding-remove","uk-margin-remove");
+        newelement.textContent="copied!"
+        newelement.setAttribute("uk-dropdown","mode:click;pos: top-center;");
+        newelement.setAttribute("style","min-width:0px; box-shadow:0 0px 0px; background-color:rgba(0,0,0,0); z-index:0;");
+        
+        codelist[i].parentElement.appendChild(newelement);
     }
 }
