@@ -1,6 +1,7 @@
 function Copy(id){
     var string=document.getElementById(id).textContent;
     navigator.clipboard.writeText(string);
+    alert("コピーしました")
 }
 
 
