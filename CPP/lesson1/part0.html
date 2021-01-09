@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../uikit-3.6.5/css/uikit.min.css">
+        <script src="../uikit-3.6.5/js/uikit.min.js"></script>
+        <script src="../uikit-3.6.5/js/uikit-icons.min.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <script src="../script.js"></script>
+        <link rel="stylesheet" href="../css.css">
+        <link rel="shortcut icon" href="../images/cpp.png">
+
+        <title>目標物を確認しよう(レジ作り) - C++入門</title>
+    </head>
+    <body>
+
+        <!-- template -->
+        <div uk-sticky class="uk-sticky head">
+            <div uk-grid class="uk-margin-small-left">
+                <div class=" uk-margin-auto-vertical">
+                    <button class="uk-button uk-button-default uk-margin-auto-vertical" style="padding-left: 10px; padding-right: 10px; border:0px;" uk-toggle="target: #side-bar">
+                        <span uk-icon="icon: menu; ratio: 2" style="color: white;"></span>
+                    </button>
+                </div>
+                
+                <a uk-grid class="uk-link-reset" href="../index.html">
+                    <div class="uk-padding-small uk-margin-small-left">
+                        <img data-src="../images/cpp.png" width="50px" height="50px" uk-img>
+                    </div>
+                    <h2 class="uk-padding-small uk-margin-auto-vertical" style="color: white;">C++ 入門</h2>
+                </a>
+            </div>
+        </div>
+        <div id="side-bar" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" id="part-list">
+                        <!-- Jump Menu -->
+                        <li><h2>レジ作り</h2></li>
+                </ul>
+        
+            </div>
+        </div>
+        <!-- template end -->
+
+        <div id="main-content" class="uk-margin-large-right uk-margin-large-left uk-margin-top">
+            <h2 class="uk-heading-divider">目標物を確認しよう</h2>
+            <p>まず最初に、このレッスンでの目標を確認しましょう。</p>
+            <p>下のプログラム(ソースコードといいます)をコピーして、実際に実行してみてください(実行の方法は部員に聞いてください)。</p>
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint lang-cpp" id="code">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+    int a,n; //a:単価 n:個数
+    int money=1000; //money:手持ちの金額
+
+    cout &lt;&lt; "単価を入力してください:";
+    cin &gt;&gt; a;
+
+    cout &lt;&lt; "個数を入力してください:";
+    cin &gt;&gt; n;
+
+    int sum = a * n;
+    if (sum &lt;= money){
+        cout &lt;&lt; "あと" &lt;&lt; money - sum &lt;&lt; "円残っています。" &lt;&lt; endl;
+    }
+    else{
+        cout &lt;&lt; "お金が足りません" &lt;&lt; endl;
+    }
+}
+</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px;" onclick="Copy('code')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>黒い画面が出てきて、単価と個数を聞かれると思います。それぞれ入力してあげると、合計金額が表示されます。</p>
+            <p>確認ができたら、次の章に進みましょう。</p>
+            <div>
+                <a href="part1.html"><button class="uk-button uk-button-default uk-float-right uk-margin-large-bottom">次の章に進む</button></a>
+            </div>
+        </div>
+    </body>
+</html>

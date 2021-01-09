@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../uikit-3.6.5/css/uikit.min.css">
+        <script src="../uikit-3.6.5/js/uikit.min.js"></script>
+        <script src="../uikit-3.6.5/js/uikit-icons.min.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <script src="../script.js"></script>
+        <link rel="stylesheet" href="../css.css">
+        <link rel="shortcut icon" href="../images/cpp.png">
+
+        <title>計算をしよう(レジ作り) - C++入門</title>
+    </head>
+    <body>
+
+        <!-- template -->
+        <div uk-sticky class="uk-sticky head">
+            <div uk-grid class="uk-margin-small-left">
+                <div class=" uk-margin-auto-vertical">
+                    <button class="uk-button uk-button-default uk-margin-auto-vertical" style="padding-left: 10px; padding-right: 10px; border:0px;" uk-toggle="target: #side-bar">
+                        <span uk-icon="icon: menu; ratio: 2" style="color: white;"></span>
+                    </button>
+                </div>
+                
+                <a uk-grid class="uk-link-reset" href="../index.html">
+                    <div class="uk-padding-small uk-margin-small-left">
+                        <img data-src="../images/cpp.png" width="50px" height="50px" uk-img>
+                    </div>
+                    <h2 class="uk-padding-small uk-margin-auto-vertical" style="color: white;">C++ 入門</h2>
+                </a>
+            </div>
+        </div>
+        <div id="side-bar" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" id="part-list">
+                        <!-- Jump Menu -->
+                        <li><h2>レジ作り</h2></li>
+                </ul>
+        
+            </div>
+        </div>
+        <!-- template end -->
+        <div id="main-content" class="uk-margin-large-right uk-margin-large-left uk-margin-top uk-margin-large-bottom">
+            <h2 class="uk-heading-divider">計算をしよう</h2>
+            <p>このパートでは、C++での計算について学んでいきます。</p>
+            <h3 class="uk-heading-bullet">整数の計算</h3>
+            <p>
+                計算はプログラミングのメインと言っても過言ではありません(過言です)。まずは整数の計算からやってみましょう。<br>
+                C++に限らず多くのプログラミングでは、計算に「演算子」を使います。演算子には以下のものがあります。
+            </p>
+            <table class="uk-table uk-table-divider uk-inline-clip">
+                <tr>
+                    <th class="uk-width-small">演算子</th><th class="uk-width-small">役割</th>
+                </tr>
+                <tr>
+                    <td>+</td><td>加算</td>
+                </tr>
+                <tr>
+                    <td>-</td><td>減算</td>
+                </tr>
+                <tr>
+                    <td>*</td><td>乗算</td>
+                </tr>
+                <tr>
+                    <td>/</td><td>除算</td>
+                </tr>
+                <tr>
+                    <td>%</td><td>剰余</td>
+                </tr>
+            </table>
+            <p>
+                上の4つは聞き覚えがあると思います。一番下の「剰余」というのは「余り」のことです。実際に使ってみましょう。
+            </p>
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint lang-cpp" id="code-1">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+    cout &lt;&lt; 10+8 &lt;&lt; endl;
+    cout &lt;&lt; 10-8 &lt;&lt; endl;
+    cout &lt;&lt; 10*8 &lt;&lt; endl;
+    cout &lt;&lt; 10/8 &lt;&lt; endl;
+    cout &lt;&lt; 10%8 &lt;&lt; endl;
+}</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-1')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>
+                これを実行すると、以下のような出力が返ってきます。
+            </p>
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint" id="output-1">18
+-2
+80
+1
+2
+</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('output-1')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>
+                ここでポイントなのが減算と除算の結果です。まず、減算ではしっかりと負数も表現できています。そして、除算は少しおかしいですね。10÷8=1.25 のはずですが、1という結果になっています。つまり、小数点以下が切り捨てられています。これは次に説明する浮動小数点数の計算で解決できます。
+            </p>
+            <div class="uk-card uk-card-primary uk-padding-small">
+                <h4 class="uk-heading-divider">コラム - オペランドと演算子</h4>
+                <p>
+                    今、演算子について説明していますが、それに対応して「オペランド」というのもがあります。
+                </p>
+                <p>
+                    オペランドとは演算の対象となる値(足す数・足される数・かける数・かけられる数...)のことです。先ほどの例の中では10や8がそれに該当します。<br>
+                    つまり、演算は<br>
+                    (オペランド) (演算子) (オペランド)<br>
+                    という形になるわけです。エラーを読むときにオペランドという言葉はよく出てくるので覚えておきましょう。
+                </p>
+            </div>
+
+            <h3 class="uk-heading-bullet">浮動小数点数の計算</h3>
+            <p>
+                まず、浮動小数点数とは何か、から説明していきましょう。<br>
+                浮動小数点数は、いわゆる小数です。ただ、小数と呼ばずに、浮動小数点数と呼んでいるのにはちゃんと意味があります(実際小数と浮動小数点数は少し違います)。ただ、これを説明すると少し難しくなるので(あと中学一年生の知識だと理解できないと思います)説明は省略します。詳しく知りたい人はGoogleで「浮動小数点数」と調べるとわかると思います。<br>
+                とにかく、浮動小数点数は小数を表していると覚えておいてください。
+            </p>
+            <p>
+                話を戻しましょう。浮動小数点数の計算は整数と同じようにすることができます。しかし、%(剰余)は使えません。
+            </p>
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint lang-cpp" id="code-2">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+    cout &lt;&lt; 1.4+0.7 &lt;&lt; endl;
+    cout &lt;&lt; 1.4-0.7 &lt;&lt; endl;
+    cout &lt;&lt; 1.4*0.7 &lt;&lt; endl;
+    cout &lt;&lt; 1.4/0.7 &lt;&lt; endl;
+}</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-2')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>実行結果</p>
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint" id="output-2">2.1
+0.7
+0.98
+2
+</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('output-2')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>
+                うまく計算できています。
+            </p>
+            <div class="uk-card uk-card-primary uk-padding-small">
+                <h4 class="uk-heading-divider">浮動小数点数の危険性</h4>
+                <p>
+                    唐突ですが、プログラマー界隈では浮動小数点数というものはしばしば嫌われています。その理由が浮動小数点数の誤差です。しかし、先ほどの例ではしっかり計算できていました。ではどこで誤差が発生しているのでしょうか。<br>
+                    その確認のために、桁数を指定して小数を出力させてみましょう。少し高度な記述をしますが、ここでは説明しません。あくまで浮動小数点数の誤差の確認のためのソースコードです。
+                </p>
+                <div class="uk-card uk-card-primary">
+                    <pre><code class="prettyprint lang-cpp" id="code-3">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+    cout &lt;&lt; setprecision(30) &lt;&lt; 0.1 &lt;&lt; endl;
+}</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-3')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <p>
+                    軽く説明すると、これは0.1という値を小数第30位まで出力出力させています。出力は以下のようになると思います。
+                </p>
+                <div class="uk-card uk-card-primary">
+                    <pre><code class="prettyprint" id="output-3">0.100000000000000005551115123126</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-margin-small-right" style="border:0px; color: black;" onclick="Copy('output-3')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <p>
+                    小数第18位くらいから乱れていますね。たかが小数第18位かと思うかもしれませんが、プログラミングでは巨大な数を扱うことも少なくありません。そのため、小さな誤差でも大きな誤差になりえてしまいます。
+                </p>
+                <p>
+                    このように、浮動小数点数で誤差が起きてしまう原因は、数値を2進法で表現しているからです。整数を2進数で表現する場合、桁は1の位、2の位、4の位...となりますが、少数の場合は1の位、1/2の位、1/4の位...となり、0.1などの2進数で表現できない数が出てきてしまいます。
+                </p>
+            </div>
+            <h3 class="uk-heading-bullet">浮動小数点数と整数の計算</h3>
+            <p>
+                浮動小数点数と整数を計算させた時は答えは基本的に浮動小数点数になります。しかし、もし答えが整数で表現できる時(0.1*10など)は整数になります。
+            </p>
+            <h3 class="uk-heading-bullet">複雑な計算・計算の優先順位</h3>
+            <p>
+                演算には、もちろん「()」を使うことができます。しかし、「{}」や「[]」は使うことができません。そのため、()を入れ子にする必要があります。こんな感じです。
+            </p>
+            <div class="uk-card uk-card-deafult">
+                <pre><code class="prettyprint lang-cpp" id="code-4">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+cout &lt;&lt; 5*(10*12+(3+4)*3) &lt;&lt; endl;
+}</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-4')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>
+                出力結果
+            </p>
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint lang-cpp" id="output-4">705</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-margin-small-right" style="border:0px; color: black;" onclick="Copy('output-4')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>
+                また、演算には優先順位もあります。基本的に数学と同じで、乗算・除算が最優先で加算・減算がその次になります。ちなみに、剰余(%)は乗算・除算と同じ優先度になっています。そして、少し意外かもしれませんが、計算は必ず左から右に行われるわけではないということを覚えておいてください。
+            </p>
+            <div class="uk-card uk-card-primary uk-padding-small">
+                <h4 class="uk-heading-divider">コラム - ゼロ除算</h4>
+                <p>
+                    C++でもゼロ除算(10/0など)をしてはいけません。処理上未定義という、C++で決められていない動作になってしまうからです。もし行ってしまった場合、エラーが発生してしまいます。
+                </p>
+            </div>
+            <p>
+                では、このパートは終了です！
+                好きな計算(考査の得点計算でもいいです)をしてみてください
+            </p>
+            <div>
+                <a href="part1.html"><button class="uk-button uk-button-default uk-float-left uk-margin-large-bottom">前の章に戻る</button></a>
+                <a href="part3.html"><button class="uk-button uk-button-default uk-float-right uk-margin-large-bottom">次の章に進む</button></a>
+            </div>
+        </div>
+    </body>
+</html>

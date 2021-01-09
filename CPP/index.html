@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="uikit-3.6.5/css/uikit.min.css">
+        <script src="uikit-3.6.5/js/uikit.min.js"></script>
+        <script src="uikit-3.6.5/js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="css.css">
+        <title>コンテンツ一覧 - C++入門</title>
+        <link rel="shortcut icon" href="images/cpp.png">
+    </head>
+    <body>
+
+        <!-- template -->
+        <div uk-sticky class="uk-sticky head">
+            <div uk-grid class="uk-margin-small-left">
+                <a uk-grid class="uk-link-reset" href="index.html">
+                    <div class="uk-padding-small uk-margin-small-left">
+                        <img data-src="images/cpp.png" width="50px" height="50px" uk-img>
+                    </div>
+                    <h2 class="uk-padding-small uk-margin-auto-vertical" style="color: white;">C++ 入門</h2>
+                </a>
+            </div>
+        </div>
+        <!-- template end -->
+
+        <div id="main-content" class="uk-margin-large-right uk-margin-large-left uk-margin-top">
+            <p>
+                プログラミング言語の一つ、C++は豊富な機能、実行速度の速さなどから世界でも多く使われている言語です。
+            </p>
+            <p>
+                このサイトではいくつかの目標物を選んで、それを制作しながらC++の基本・応用を学んでいきます。<br>
+                載っているソースコードを写して実行しながら学んでいきましょう。
+            </p>
+            <div class="uk-margin">
+                <h1 class="uk-heading-divider">コンテンツ一覧</h1>
+            </div>
+            <div class="uk-margin-left uk-padding-large uk-padding-remove-top uk-margin-large-right">
+                <ul uk-accordion="multitiple: true">
+                    <li>
+                        <a class="uk-accordion-title">レジ作り</a>
+                        <div class="uk-accordion-content" id="reji">
+                            <hr class="uk-divider-icon">
+                            <p>
+                                CLI上でレジのようなプログラムを作成します。
+                            </p>
+                            <table class="uk-table uk-table-divider">
+                                <caption>パート一覧</caption>
+                                <thead>
+                                    <tr>
+                                        <th class="uk-width-1-3">パート</th>
+                                        <th>学ぶこと</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><button class="uk-button uk-button-text"><a class="uk-link-reset uk-text-capitalize" href="lesson1/part0.html">目標物を確認しよう</a></button></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="uk-button uk-button-text"><a class="uk-link-reset uk-text-capitalize" href="lesson1/part1.html">出力をしよう</a></button></td>
+                                        <td>出力・文字リテラル</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="uk-button uk-button-text"><a class="uk-link-reset uk-text-capitalize" href="lesson1/part2.html">計算をしよう</a></button></td>
+                                        <td>整数・浮動小数点数・計算</td>
+                                    </tr>
+                                    <tr>
+                                        <td><button class="uk-button uk-button-text"><a class="uk-link-reset uk-text-capitalize" href="lesson1/part3.html">変数の使い方</a></button></td>
+                                        <td>変数</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../uikit-3.6.5/css/uikit.min.css">
+        <script src="../uikit-3.6.5/js/uikit.min.js"></script>
+        <script src="../uikit-3.6.5/js/uikit-icons.min.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <script src="../script.js"></script>
+        <link rel="stylesheet" href="../css.css">
+        <link rel="shortcut icon" href="../images/cpp.png">
+        <title>出力をしよう(レジ作り) - C++入門</title>
+    </head>
+    <body>
+
+        <!-- template -->
+        <div uk-sticky class="uk-sticky head">
+            <div uk-grid class="uk-margin-small-left">
+                <div class=" uk-margin-auto-vertical">
+                    <button class="uk-button uk-button-default uk-margin-auto-vertical" style="padding-left: 10px; padding-right: 10px; border:0px;" uk-toggle="target: #side-bar">
+                        <span uk-icon="icon: menu; ratio: 2" style="color: white;"></span>
+                    </button>
+                </div>
+                <a uk-grid class="uk-link-reset" href="../index.html">
+                    <div class="uk-padding-small uk-margin-small-left">
+                        <img data-src="../images/cpp.png" width="50px" height="50px" uk-img>
+                    </div>
+                    <h2 class="uk-padding-small uk-margin-auto-vertical" style="color: white;">C++ 入門</h2>
+                </a>
+            </div>
+        </div>
+        <div id="side-bar" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" id="part-list">
+                        <!-- Jump Menu -->
+                        <li><h2>レジ作り</h2></li>
+                </ul>
+        
+            </div>
+        </div>
+        <!-- template end -->
+
+        <div id="main-content" class="uk-margin-large-right uk-margin-large-left uk-margin-top uk-margin-large-bottom">
+            <h2 class="uk-heading-divider" id="top">出力をしよう</h2>
+            <p>ここでは、文字の表示(これからは「出力」と呼びます)について学んでいきます。</p>
+            <h3 class="uk-heading-bullet" id="template-of-code">コードのテンプレート</h3>
+            <p>下にあるソースコードはこのレッスンで使うソースコードの雛形(テンプレート)です。<br>ここに書かれていることの意味はまだ覚えるには早すぎるので、まずはおまじない程度に思っておいてください。</p>
+
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint lang-cpp" id="code-1">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+
+}</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px;" onclick="Copy('code-1')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>この部分は時々省略していきますが、ソースコードは「{」と「}」の間に書いていきましょう。</p>
+            <h3 class="uk-heading-bullet" id="way-output">出力の仕方</h3>
+            <p>さて、本題に入ります。</p>
+            <p>出力は、「cout &lt;&lt; 出力したいもの &lt;&lt; endl;」とすることでできます。<br>例えば、「Hello World!」と出力する場合、以下のように書きます。</p>
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint lang-cpp" id="code-2">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+    cout &lt;&lt; "Hello World!" &lt;&lt; endl;
+}</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px;" onclick="Copy('code-2')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>少しずつ説明していきましょう。</p>
+            <p>
+                まず、最初のの「cout」の部分です。<br>
+                この部分は、「この後に続くことを出力するよ！」という合図です。上のソースコードの場合だと「<code class="prettyprint">"Hello World"</code>」と「<code class="prettyprint">endl</code>」を順に出力します。そして、それらをつなぎ合わせているのが「&lt;&lt;」です<br>
+                ここで、「endl」というものが出てきました。これは改行を表す文字です。これをつけると、つけた部分の直前で改行を行います。つまり、
+                <div class="uk-card uk-card-default">
+                    <pre><code class="prettyprint lang-cpp" id="code-3">cout &lt;&lt; "1行目" &lt;&lt; endl &lt;&lt; "2行目" &lt;&lt; endl;</code><br></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-margin-small-right" style="border:0px; color: black;" onclick="Copy('code-3')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                と記述すると、<br>
+                <div class="uk-card uk-card-default">
+                    <pre><code class="prettyprint lang-text" id="output-1">1行目<br>2行目</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('output-1')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                という出力が返ってくることになります。
+            </p>
+            <div class="uk-card uk-card-primary uk-padding-small">
+                <h4 class="uk-heading-divider">C++のルール - 文と「;」 〜C++の柔軟性〜</h4>
+                <p>C++のプログラムは、「文」が基本単位です。先ほどのソースコードだと、</p>
+                    <div class="uk-card uk-card-default" id="code-4">
+                        <pre><code class="prettyprint lang-cpp">cout &lt;&lt; "Hello World!" &lt;&lt; endl;</code></pre>
+                        <button class="uk-button uk-button-default uk-position-top-right uk-margin-small-right" style="border:0px; color: black;" onclick="Copy('code-4')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                    </div>
+                <p>
+                    これが一つの「文」です。C++にはこのような文を書く上でいくつかルールがあります。それは、<br>
+                    <span class="uk-text-warning">文の最後には必ず「;(セミコロン)」を書く</span><br>
+                    <span class="uk-text-warning">文は基本的に半角で書く(<a href="#string" uk-scroll class="uk-link-text" style="color: inherit;">文字リテラル</a>などを除く)</span><br>
+                    ということです。試しに、先ほどのコードからセミコロンを抜いてみましょう。下のようになります。
+                </p>
+                <div class="uk-card uk-card-default">
+                    <pre><code class="prettyprint lang-cpp" id="code-5">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+    cout &lt;&lt; "Hello World!" &lt;&lt; endl
+}</code></pre>
+                        <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-5')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <p>
+                    (エディタによっては最後の「{」に赤線があると思います)<br>
+                    おそらくこれを実行すると、エラーが起こると思います。エラーは基本的にソースコードがルールを破ってしまっている場合に発生します。この場合だと、「endl」の直後に「;」がないことが原因です。
+                </p>
+                <p>
+                    少し面倒そうですが、逆に言ってしまえばこれらのルールさえ守っていればあとは自由に記述できます。つまり、
+                </p>
+                <div class="uk-card uk-card-default">
+                    <pre><code class="prettyprint lang-cpp" id="code-6">cout &lt;&lt; "Hello World!"<br>     &lt;&lt; endl;</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-6')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <p>
+                    このような記述や、
+                </p>
+                <div class="uk-card uk-card-default" id="code-7">
+                    <pre><code class="prettyprint lang-cpp">cout &lt;&lt; "Hello World!"<br>     &lt;&lt; endl;</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-7')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <p>
+                    このような記述も可能です。<br>
+                    ただ、以下のような記述だとエラーが起こってしまいます。
+                </p>
+                <div class="uk-card uk-card-default" id="code-8">
+                    <pre><code class="prettyprint lang-cpp">co<br>ut &lt;&lt; "Hello World!" &lt;&lt; endl;</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-8')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <div class="uk-card uk-card-default" id="code-9">
+                    <pre><code class="prettyprint lang-cpp">cout &lt;&lt; "Hello World!" &lt;&lt; en dl;</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-margin-small-right" style="border:0px; color: black;" onclick="Copy('code-9')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <div class="uk-card uk-card-default" id="code-10">
+                    <pre><code class="prettyprint lang-cpp">cout &lt;&lt; "Hello 
+World!" &lt;&lt; endl;</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-10')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+
+                <p>
+                    これらに共通して言えるのは、「何かを表すものを改行・空白で分断している」ということです。3つめについてはあとの文字リテラルで説明しますが、残りの二つはどちらも「cout」と「endl」のような、「その単語で意味を持つもの」を改行・空白で分断してしまっています<br>
+                    これを踏まえて、C++のルールに次のことを追加しておきましょう<br>
+                    <span class="uk-text-warning">「その単語で意味を持つもの」は改行や空白で分断しない</span>
+                </p>
+            </div>
+            <h3 class="uk-heading-bullet" id="string">文字リテラル</h3>
+            <p>
+                文字リテラルとは、「""(ダブルクォーテーション)」で囲われたもののことです。たとえば、<code class="prettyprint lang-cpp">"Hello World!"</code>などが該当します。これと似たもので「文字列」がありますが、両者の違いは後のパートで説明します。<br>
+                文字列の内容は自由です。例えば、<code class="prettyprint lang-cpp">"cout"</code>と書いてもその文字リテラルは、出力を意味する<code class="prettyprint">cout</code>とは何の関係性もありません。ただの文字列として扱われます。
+                しかし、「""」で囲われていない文字列は全てC++の機能や変数(次の章で説明します)として扱われてしまいます。そのため、
+                <div class="uk-card uk-card-default">
+                    <pre><code class="prettyprint lang-cpp" id="code-11">cout &lt;&lt; Hello World;</code></pre>
+                        <button class="uk-button uk-button-default uk-position-top-right uk-margin-right" style="border:0px; color: black;" onclick="Copy('code-11')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                と記述するとエラーが発生してしまいます。<code class="prettyprint">Hello</code>や<code class="prettyprint">World</code>の名前を持つC++の機能が存在しないからです。
+            </p>
+
+            <div class="uk-card uk-card-primary uk-padding-small">
+                <h4 class="uk-heading-divider">改行の方法 - C++の特殊文字達</h4>
+                <p>
+                    ここでは、文字リテラルで改行を表現する方法を改行を表現する方法を説明します。<br>
+                    文字リテラルで改行を表現するには「¥n」という文字を使います。以下のように使います。
+                </p>
+                <div class="uk-card uk-card-default">
+                    <pre><code class="prettyprint lang-cpp" id="code-12">cout &lt;&lt; "Hello World¥n";</code></pre>
+                        <button class="uk-button uk-button-default uk-position-top-right uk-margin-right" style="border:0px; color: black;" onclick="Copy('code-12')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <p>
+                    これは、
+                </p>
+                <div class="uk-card uk-card-default">
+                    <pre><code class="prettyprint lang-cpp" id="code-13">cout &lt;&lt; "Hello World" &lt;&lt; endl;</code></pre>
+                        <button class="uk-button uk-button-default uk-position-top-right uk-margin-right" style="border:0px; color: black;" onclick="Copy('code-13')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+                </div>
+                <p>
+                    これとほとんど同じ意味です。どちらを使うかはユーザー次第です。<br>
+                </p>
+                <p>
+                    「¥n」のような、特殊な表現をさせる文字を「特殊文字(エスケープシーケンス)」と呼びます。C++には以下のようなエスケープシーケンスがあります。全て知っておく必要はないですが、少し覚えておくといいでしょう。
+                </p>
+                <table class="uk-table uk-margin-large-left">
+                    <tr>
+                        <th class="uk-width-small">名前</th>
+                        <th>役割</th>
+                    </tr>
+                    <tr>
+                        <td>¥n</td>
+                        <td>改行</td>
+                    </tr>
+                    <tr>
+                        <td>¥a</td>
+                        <td>警告音</td>
+                    </tr>
+                    <tr>
+                        <td>¥b</td>
+                        <td>バックスペース</td>
+                    </tr>
+                    <tr>
+                        <td>¥r</td>
+                        <td>行の先頭に戻る</td>
+                    </tr>
+                    <tr>
+                        <td>¥f</td>
+                        <td>改ページ</td>
+                    </tr>
+                    <tr>
+                        <td>¥t</td>
+                        <td>水平タブ</td>
+                    </tr>
+                    <tr>
+                        <td>¥v</td>
+                        <td>垂直タブ</td>
+                    </tr>
+                    <tr>
+                        <td>¥¥</td>
+                        <td>文字としての¥</td>
+                    </tr>
+                    <tr>
+                        <td>¥"</td>
+                        <td>文字としての"</td>
+                    </tr>
+                    <tr>
+                        <td>¥'</td>
+                        <td>文字としての'</td>
+                    </tr>
+                    <tr>
+                        <td>¥0</td>
+                        <td>ヌル文字(何もしません)</td>
+                    </tr>
+                </table>
+            </div>
+            <h3 class="uk-heading-bullet">数値の出力</h3>
+            <p>2や3.14などの数値を出力したい場合は「""」で囲う必要はないです。そのため、</p>
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint lang-cpp" id="code-14">cout &lt;&lt; 3.14 &lt;&lt; endl;</code></pre>
+                    <button class="uk-button uk-button-default uk-position-top-right uk-margin-right" style="border:0px; color: black;" onclick="Copy('code-14')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+            </div>
+            <p>
+                このように書くことで数値が出力できます。
+            </p>
+            <p>
+                これでこのパートは終了です！<br>
+                好きな文字や数字を出力させてみてください
+            </p>
+            <div>
+                <a href="part0.html"><button class="uk-button uk-button-default uk-float-left uk-margin-large-bottom">前の章に戻る</button></a>
+                <a href="part2.html"><button class="uk-button uk-button-default uk-float-right uk-margin-large-bottom">次の章に進む</button></a>
+            </div>
+        </div>
+    </body>
+</html>
