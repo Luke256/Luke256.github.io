@@ -1,6 +1,14 @@
 function Copy(id){
     var string=document.getElementById(id).textContent;
     navigator.clipboard.writeText(string);
+
+    var hide_dropdown=function (){
+        var target=document.getElementById(id);
+        var drop=target.parentNode.nextElementSibling.nextElementSibling;
+        
+        UIkit.dropdown(drop).hide();
+    }
+    setTimeout(hide_dropdown,1000);
 }
 
 
@@ -29,7 +37,7 @@ window.onload=function(){
         var newelement=document.createElement("div");
         newelement.classList.add("uk-text-center","uk-padding-remove","uk-margin-remove");
         newelement.textContent="copied!"
-        newelement.setAttribute("uk-dropdown","mode:click;pos: top-center;");
+        newelement.setAttribute("uk-dropdown","mode:click;pos: top-center;delay-hide: 1000;");
         newelement.setAttribute("style","min-width:0px; box-shadow:0 0px 0px; background-color:rgba(0,0,0,0); z-index:0;");
         
         codelist[i].parentElement.appendChild(newelement);
