@@ -13,7 +13,6 @@ function Copy(id){
 
 
 window.onload=function(){
-    alert()
     var parent=document.getElementById("part-list");
     var PageList=[
         ["part0.html","目標物を確認しよう"],
