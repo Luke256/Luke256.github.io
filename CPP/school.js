@@ -1,4 +1,4 @@
 window.onload = function(){
   var name=document.getElementById("luke");
-  name.style.color="blue";
+  name.setAttribute("style", "color:blue; font-style:100px;");
 }
