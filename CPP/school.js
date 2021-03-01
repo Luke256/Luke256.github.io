@@ -1,0 +1,3 @@
+function school(){
+  alert("アラート!!!");
+}
