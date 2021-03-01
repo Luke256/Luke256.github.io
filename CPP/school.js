@@ -1,3 +1,3 @@
-function school(){
+window.onload() = function(){
   alert("アラート!!!");
 }
