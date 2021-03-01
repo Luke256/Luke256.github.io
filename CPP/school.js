@@ -1,3 +1,4 @@
 window.onload = function(){
-  alert("アラート!!!");
+  var name=document.getElementById("luke");
+  name.style.color="blue";
 }
