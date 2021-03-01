@@ -44,6 +44,3 @@ window.onload=function(){
     }
 }
 
-function school(){
-    alert("アラート!!!");
-}
