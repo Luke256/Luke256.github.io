@@ -43,3 +43,7 @@ window.onload=function(){
         codelist[i].parentElement.appendChild(newelement);
     }
 }
+
+function school(){
+    alert("アラート!!!");
+}
