@@ -24,7 +24,7 @@
                 
                 <a uk-grid class="uk-link-reset" href="../index.html">
                     <div class="uk-padding-small uk-margin-small-left">
-                        <img data-src="images/cpp.png" width="50px" height="50px" uk-img>
+                        <img data-src="../images/cpp.png" width="50px" height="50px" uk-img>
                     </div>
                     <h2 class="uk-padding-small uk-margin-auto-vertical" style="color: white;">C++ 入門</h2>
                 </a>
@@ -44,8 +44,54 @@
             <h2 class="uk-heading-divider">変数の使い方</h2>
             <p>このパートでは、変数について学んでいきます。</p>
             <h3 class="uk-heading-bullet">変数とは</h3>
-            <p>"
+            <p>前章で、計算は 10*2 のように数字を直接打ち込んでいました。このような方法での計算もいいのですが、一つ値を変えるときに面倒になると思います。
             </p>
+            <p>
+                例えば、円の面積を求めるとき、「半径*半径*円周率」という公式を使います。このとき、半径を変えるとなると、二箇所変えなければならず、面倒です。<br>
+                ここで登場するのが「変数」です。
+            </p>
+            <p>
+                変数はよく箱に例えられて、「なんらかの値を格納しておくもの」です。先ほどの円の面積だと、「半径」と「円周率」を変数に置いてしまえば、半径を変えるときにその「半径」という変数を変えるだけで済みます。
+            </p>
+            <p>
+                早速コード例を見てみましょう。上が変数なし、下が変数ありバージョンです
+            </p>
+
+            <div class="uk-card uk-card-default">
+                <pre><code class="prettyprint lang-cpp" id="code-1">#include &lt;iostream&gt;
+
+using namespace std;
+
+int main(){
+    // 半径:10cm
+    // 円周率:3
+
+    // 1.変数なし
+    cout << 10 * 10 * 3 << endl;
+
+    // 2. 変数あり
+    int radius = 10;
+    int pi = 3;
+
+    cout<< radius * radius * pi << endl;
+    
+}</code></pre>
+                <button class="uk-button uk-button-default uk-position-top-right uk-position-small" style="border:0px; color: black;" onclick="Copy('code-1')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
         </div>
+        <p>
+            一見、変数なしの方が記述量も少なく、いいコードのように見えるかもしれません。では、このコードを 意味 を考えながら読んでみます。
+        </p>
+        <p>
+            1の方では「10*10*3」と、<span class="warning-main">定数の式のみ</span>で書かれてしまっています。私たちはこれら3つの定数の意味を全て把握した上でコードを書きましたが、これは第三者から見るとただの式に過ぎず、なんの意味も感じることはできません。
+        </p>
+        <p>
+            2を見ると、2つの変数「radius(半径)」と「pi(円周率)」が使われています。そして、そのそれぞれに「代入」という操作が行われています(この操作は後ほど説明します)。そうすることで、このコードを読む第三者は、このコードの意味を容易に理解することができるようになります。
+        </p>
+        <p>
+            このように、「なんらかの値を格納」して、「<span class="warning-main">その数値に意味を持たせる</span>」ものが変数です。
+        </p>
+
+
+        <h3 class="uk-heading-bullet">変数の基本</h3>
     </body>
 </html>
