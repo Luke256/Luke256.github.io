@@ -93,5 +93,69 @@ int main(){
 
 
         <h3 class="uk-heading-bullet">変数の基本</h3>
+        <p>
+            では早速変数を使ってみましょう。
+        </p>
+        <p>
+            変数を使う際はまず、その変数の「宣言」と「定義」という動作が必要になります。C++では、変数の場合はこの二つの動作は一緒にできるのでどちらかの意味で捉えてもらってもそこまで問題はないです(後のクラスや自作関数といったことを学習するときにはこの二つの操作は重要になってきます)。<br>
+            基本的に、変数の宣言は
+        </p>
+        <div class="uk-card uk-card-default">
+            <pre><code class="prettyprint lang-cpp" id="code-2">int number;</code></pre>
+            <button class="uk-button uk-button-default uk-position-top-right uk-margin-small-right" style="border:0px; color: black;" onclick="Copy('code-2')"><span uk-icon="icon:copy; ratio:1.5;"></span></button>
+    </div>
+        <p>
+            このようにして行います。<br>
+            これは、「『int型(整数)』の変数を num という名前で使います。」という意味で、これを記述すると、その後からint型の変数numが使えるようになります。<br>
+            ここでは、変数を num という名前にしましたが以下のようなルールさえ守っていればどんな名前でも大丈夫です。
+        </p>
+        <p>
+            ・一文字目は必ずa~z、A~Zのアルファベット、または「_(アンダーバー)」<br>
+            ・二文字目以降はアルファベット、「_」に加え、数字が使える<br>
+            ・予約語(=cout のような、C++の機能として元々あるもの)ではない<br>
+        </p>
+
+        <div class="uk-card uk-card-primary uk-padding-small">
+            <h4 class="uk-heading-divider">C++のルール - 変数の型</h4>
+            <p>
+                先ほど、文中に「int型」という単語が出てきました。これは、C++では、「整数の型を持つもの」という意味で使われます。<br>
+                ではそもそも型とはなんでしょうか。
+            </p>
+            <p>
+                「型」と聞くとクッキーを作るときに使うような、金属製の枠を連想するかもしれません。はい。正解です。実は、C++に限らず、多くのプログラミング言語における「型」の本質的な意味はクッキーの型とほとんど同じなのです。
+            </p>
+            <p>
+                つまり、型とは、<span class="uk-text-warning">データを表現するための形式</span>のことを指します。例えば、「int型の数値4」というのを例に取ると、コンピュータ上ではただのビット列(2進数)として認識されてるものを、「int型」とすることで、「それを整数として表現するよ」という意味がつけられ、初めて「4」という意味を持つようになります。
+            </p>
+            <p>
+                そして、この「型」は様々な種類があります。以下にその一覧を載せておきます。
+            </p>
+            <table class="uk-table uk-margin-large-left uk-table-divider uk-inline-clip">
+                <tr>
+                    <th class="uk-width-small uk-text-warning">名前</th>
+                    <th class="uk-width-small uk-text-warning">意味</th>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>整数</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>浮動小数点数(小数)</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>浮動小数点数(floatよりも正確)</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>文字(単体)</td>
+                </tr>
+                <tr>
+                    <td>(std::)string</td>
+                    <td>文字列</td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
