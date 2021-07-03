@@ -48,3 +48,27 @@ html{
     text-decoration:none;
     padding: 3px;
 }
+
+.marker-siv3d{
+    background-color: hsla(207, 90%, 54%, 1);
+    border-radius: 3px;
+    color: white;
+    text-decoration:none;
+    padding: 3px;
+}
+
+.marker-googledrive{
+    background-color: rgb(83,171,110);
+    border-radius: 3px;
+    color: white;
+    text-decoration:none;
+    padding: 3px;
+}
+
+.marker-twitter{
+    background-color: #00acee;
+    border-radius: 3px;
+    color: white;
+    text-decoration:none;
+    padding: 3px;
+}
