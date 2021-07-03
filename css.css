@@ -72,3 +72,11 @@ html{
     text-decoration:none;
     padding: 3px;
 }
+
+.marker-cpp{
+    background-color: rgb(29, 67, 126);
+    border-radius: 3px;
+    color: white;
+    text-decoration:none;
+    padding: 3px;
+}
