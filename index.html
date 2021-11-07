@@ -1,322 +1,444 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9G242ZGQ63"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-        
-          gtag('config', 'G-9G242ZGQ63');
-        </script>
-        <meta name="google-site-verification" content="_WxWAnezH3kU88Rkqw9fjUZp1CKbpV_fh-lzvSkq94o" />
-        <title>Luke</title>
-        <link rel="shortcut icon" href="image/icon.png">
-        <link rel="stylesheet" href="uikit-3.6.5/css/uikit.min.css">
-        <link rel="stylesheet" href="css.css">
-        <script src="uikit-3.6.5/js/uikit.min.js"></script>
-        <script src="uikit-3.6.5/js/uikit-icons.min.js"></script>
-    </head>
-    <body>
 
-        <div uk-scrollspy="cls: uk-animation-fade; delay: 500" class="uk-padding">
-            <!--junp button-->
-            <div uk-sticky class="uk-margin-top">
-                <button class="uk-button uk-button-default" type="button" uk-toggle="target: #navigation" style="padding-left: 10px; padding-right:10px;">
-                    <span uk-icon="menu"></span>
-                </button>
-            </div>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9G242ZGQ63"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-            <!--header-->
-            <div class="uk-text-center uk-heading-small uk-flex-center">
-                <span style="color:#555555">Luke</span>
-                <div uk-grid class="uk-flex-center">
-                    <div class="uk-animation-fade">
-                        <a href="https://twitter.com/Luke02561" class="uk-icon-button" uk-icon="twitter" target="_blank" rel="noopener noreferrer"></a>
-                    </div>
-                    <div>
-                        <a href="https://github.com/Luke256" class="uk-icon-button" uk-icon="github" target="_blank" rel="noopener noreferrer"></a>
-                    </div>
-                    <div class="uk-inline">
-                        <button class="uk-button uk-button-default" type="button" style="padding-left: 10px; padding-right:10px;">
-                            <span uk-icon="icon: plus"></span>
-                        </button>
-                        <div uk-dropdown="mode:click;">
-                            <ul class="uk-nav uk-dropdown-nav">
-                                <li><button class="uk-button uk-button-text">
-                                    <a href="https://atcoder.jp/users/yuta28" class="uk-link-reset uk-text-capitalize" target="_blank" rel="noopener noreferrer">AtCoder</a>
+        gtag('config', 'G-9G242ZGQ63');
+    </script>
+    <meta name="google-site-verification" content="_WxWAnezH3kU88Rkqw9fjUZp1CKbpV_fh-lzvSkq94o" />
+    <title>Luke - ホーム</title>
+    <link rel="shortcut icon" href="image/icon.png">
+    <link rel="stylesheet" href="uikit-3.6.5/css/uikit.min.css">
+    <link rel="stylesheet" href="css.css">
+    <script src="uikit-3.6.5/js/uikit.min.js"></script>
+    <script src="uikit-3.6.5/js/uikit-icons.min.js"></script>
+</head>
+
+<body>
+
+    <div uk-scrollspy="cls: uk-animation-fade; delay: 500" class="uk-padding">
+        <!--junp button-->
+        <div uk-sticky class="uk-margin-top">
+            <button class="uk-button uk-button-default" type="button" uk-toggle="target: #navigation"
+                style="padding-left: 10px; padding-right:10px;">
+                <span uk-icon="menu"></span>
+            </button>
+        </div>
+
+        <!--header-->
+        <div class="uk-text-center uk-heading-small uk-flex-center">
+            <span style="color:#555555">Luke</span>
+            <div uk-grid class="uk-flex-center">
+                <div class="uk-animation-fade">
+                    <a href="https://twitter.com/Luke02561" class="uk-icon-button" uk-icon="twitter" target="_blank"
+                        rel="noopener noreferrer"></a>
+                </div>
+                <div>
+                    <a href="https://github.com/Luke256" class="uk-icon-button" uk-icon="github" target="_blank"
+                        rel="noopener noreferrer"></a>
+                </div>
+                <div class="uk-inline">
+                    <button class="uk-button uk-button-default" type="button"
+                        style="padding-left: 10px; padding-right:10px;">
+                        <span uk-icon="icon: plus"></span>
+                    </button>
+                    <div uk-dropdown="mode:click;">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li><button class="uk-button uk-button-text">
+                                    <a href="https://atcoder.jp/users/yuta28" class="uk-link-reset uk-text-capitalize"
+                                        target="_blank" rel="noopener noreferrer">AtCoder</a>
                                 </button></li>
-                                <li><button class="uk-button uk-button-text">
-                                    <a href="https://qiita.com/luke02561" class="uk-link-reset uk-text-capitalize" target="_blank" rel="noopener noreferrer">Qiita</a>
+                            <li><button class="uk-button uk-button-text">
+                                    <a href="https://qiita.com/luke02561" class="uk-link-reset uk-text-capitalize"
+                                        target="_blank" rel="noopener noreferrer">Qiita</a>
                                 </button></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- about me -->
-            <h2 class="uk-heading-divider" id="aboutme">About Me</h2>
-            <div class="uk-card-default uk-padding-small" style="font-size: medium;">
-                <p class="uk-margin-auto-vertical">高校1年生。中学一年生からプログラミングを始め、現在はゲーム開発や機械学習、プログラミングを使った電子工作などを行っています。</p>
-            </div>
-
-            <!--useable languages-->
-            <h2 class="uk-heading-divider" id="useablelangages">Useable Langages</h2>
-            <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
-                <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
-                    <div class="uk-padding-small">
-                        <img data-src="image/python.png" width="75" height="75" uk-img>
-                    </div>
-                    <h2 class="uk-h2 uk-padding">Python</h2>
-                    <p class="uk-margin-auto-vertical uk-text-lead">
-                        機械学習・電子工作・Discord BOT
-                    </p>
-                </div>
-
-                <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
-                    <div class="uk-padding-small">
-                        <img data-src="image/cpp.png" width="75" height="75" alt="" uk-img>
-                    </div>
-                    <h2 class="uk-h2 uk-padding">C++</h2>
-                    <p class="uk-margin-auto-vertical uk-text-lead">
-                        ゲーム制作・競技プログラミング
-                    </p>
-                </div>
-
-                <div uk-grid class="uk-margin uk-grid-collapse">
-                    <div class="uk-padding-small uk-card uk-card-default uk-margin-right">
-                        <img data-src="image/java.png" width="75" height="75" uk-img>
-                    </div>
-                    <div class="uk-padding-small uk-card uk-card-default uk-margin-right">
-                        <img data-src="image/js.jpeg" width="75" height="75" uk-img>
-                    </div>
-                </div>
-            </div>
-
-            <!-- skills -->
-            <h2 class="uk-heading-divider" id="skills">Skills</h2>
-            <div>
-                <table class="uk-table uk-table-divider uk-position-small">
-                    <tbody>
-                        <tr class="uk-text-large">
-                            <td>AtCoder 緑色(1107)</td>
-                        </tr>
-                        <tr class="uk-text-large">
-                            <td>第20回 日本情報オリンピック ランクB</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- products -->
-            <h2 class="uk-heading-divider" id="products">Products</h2>
-            <div class="uk-margin-large-left" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 500;">
-                <div uk-grid class="uk-grid-match">
-                    <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left" href="#modal-ape-x" uk-toggle>
-                        <div class="uk-flex-center">
-                            <img data-src="image/gh-logo.png" width="100%" alt="" uk-img>
-                        </div>
-                        <hr class="uk-divider-icon">
-                        <div class="uk-text-center uk-text-break">
-                            <h3 class=" uk-card-title">Ape-X</h3>
-                            <div>
-                                <span class="marker-lightblue">Python</span>
-                                <span class="marker-lightgreen">機械学習</span>
-                            </div>
-                            <span class=" uk-text-default">
-                                制作日時:2020年12月
-                            </span>
-                        </div>
-                        
-                    </a>
-                    
-                    <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left" href="#modal-hit-blow" uk-toggle>
-                        <div class="uk-flex-center">
-                            <img data-src="image/Discord-Logo-Color.png" width="100%" alt="" uk-img>
-                        </div>
-                        <hr class="uk-divider-icon">
-                        <div class="uk-text-center uk-text-break">
-                            <h3 class=" uk-card-title">数あてBOT</h3>
-                            <div>
-                                <span class="marker-lightblue">Python</span>
-                                <span class="marker-lightgreen">Discord BOT</span>
-                            </div>
-                            <span class=" uk-text-default">
-                                制作日時:2020年9月
-                            </span>
-                        </div>
-                    </a>
-
-                    <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left" href="#modal-cpp-ref" uk-toggle>
-                        <div class="uk-flex-center">
-                            <img data-src="CPP/images/cpp.png" width="100%" alt="" uk-img>
-                        </div>
-                        <hr class="uk-divider-icon">
-                        <div class="uk-text-center uk-text-break">
-                            <h3 class=" uk-card-title">C++入門用ドキュメント</h3>
-                            <div>
-                                <span class="marker-lightblue">html</span>
-                            </div>
-                            <span class=" uk-text-default">
-                                制作日時:2021年6月
-                            </span>
-                        </div>
-                    </a>
-
-                    <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left" href="#bomber-blocking" uk-toggle>
-                        <div class="uk-flex-center">
-                            <img data-src="image/opensiv3d.png" width="100%" alt="" uk-img>
-                        </div>
-                        <hr class="uk-divider-icon">
-                        <div class="uk-text-center uk-text-break">
-                            <h3 class=" uk-card-title">BomberBlocking</h3>
-                            <div>
-                                <span class="marker-siv3d">OpenSiv3D</span>
-                                <span class="marker-cpp">C++</span>
-                            </div>
-                            <span class=" uk-text-default">
-                                制作日時:2020年5月
-                            </span>
-                        </div>
-                    </a>
-
-                    <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left" href="#nn-cpp" uk-toggle>
-                        <div class="uk-flex-center">
-                            <img data-src="image/cpp.png" width="100%" alt="" uk-img>
-                        </div>
-                        <hr class="uk-divider-icon">
-                        <div class="uk-text-center uk-text-break">
-                            <h3 class=" uk-card-title">NN-Cpp(仮称)</h3>
-                            <div>
-                                <span class="marker-cpp">C++</span>
-                                <span class="marker-lightgreen">機械学習</span>
-                            </div>
-                            <span class=" uk-text-default">
-                                制作日時:2021年8月
-                            </span>
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-            
-        </div>
-        
-        <!-- products' modals -->
-        <!-- ape-x -->
-        <div id="modal-ape-x" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div uk-grid class="uk-grid-collapse">
-                    <div class="uk-padding-small">
-                        <img data-src="image/gh-logo.png" height="150" width="150" alt="" uk-img>
-                    </div>
-                    <div class="uk-text-break uk-width-2-3">
-                        <h3>Ape-X</h3>
-                        <a class="uk-link-reset marker-black" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://github.com/Luke256/Ape-X">GitHub</a>
-                        <a class="uk-link-reset marker-qiita" style="color:white!important;" target="_blank" rel="noopener noreferrer" href="https://qiita.com/Luke02561/items/5dc517b23cd780fde247">Qiita記事</a>
-                        <p>強化学習の手法の一つ、「Ape-X」をKerasというフレームワークを使って実装してみました。</p>
-                        <p>ただ、成功しているわけではなく、まだまだ課題は多いです</p>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 数あてBOT -->
-        <div id="modal-hit-blow" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div uk-grid class="uk-grid-collapse">
-                    <div class="uk-padding-small">
-                        <img data-src="image/Discord-Logo-Color.png" height="150" width="150" alt="" uk-img>
-                    </div>
-                    <div class="uk-text-break uk-width-2-3">
-                        <h3>数あてBOT</h3>
-                        <a class="uk-link-reset marker-discord" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://discord.com/api/oauth2/authorize?client_id=750658652427255819&permissions=0&scope=bot">Discord</a>
-                        <a class="uk-link-reset marker-qiita" style="color:white!important;" target="_blank" rel="noopener noreferrer" href="https://qiita.com/Luke02561/items/03a2974547ec9c237e08">Qiita記事</a>
-                        <p>Discord上で、「ヒットアンドブロー」というゲームのBOTを制作しました</p>
-                        <p>(稼働していない場合があります)</p>
-                    </div>
+        <!-- about me -->
+        <h2 class="uk-heading-divider" id="aboutme">About Me</h2>
+        <div class="uk-card-default uk-padding-small" style="font-size: medium;">
+            <p class="uk-margin-auto-vertical">高校1年生。中学一年生からプログラミングを始め、現在はゲーム開発や機械学習、プログラミングを使った電子工作などを行っています。</p>
+        </div>
+
+        <!--useable languages-->
+        <h2 class="uk-heading-divider" id="useablelangages">Useable Langages</h2>
+        <div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+            <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
+                <div class="uk-padding-small">
+                    <img data-src="image/python.png" width="75" height="75" uk-img>
+                </div>
+                <h2 class="uk-h2 uk-padding">Python</h2>
+                <p class="uk-margin-auto-vertical uk-text-lead">
+                    機械学習・電子工作・Discord BOT
+                </p>
+            </div>
+
+            <div uk-grid class="uk-card uk-card-default uk-grid-collapse uk-margin">
+                <div class="uk-padding-small">
+                    <img data-src="image/cpp.png" width="75" height="75" alt="" uk-img>
+                </div>
+                <h2 class="uk-h2 uk-padding">C++</h2>
+                <p class="uk-margin-auto-vertical uk-text-lead">
+                    ゲーム制作・競技プログラミング
+                </p>
+            </div>
+
+            <div uk-grid class="uk-margin uk-grid-collapse">
+                <div class="uk-padding-small uk-card uk-card-default uk-margin-right">
+                    <img data-src="image/java.png" width="75" height="75" uk-img>
+                </div>
+                <div class="uk-padding-small uk-card uk-card-default uk-margin-right">
+                    <img data-src="image/js.jpeg" width="75" height="75" uk-img>
                 </div>
             </div>
         </div>
 
-        <!-- cppリファレンス -->
-        <div id="modal-cpp-ref" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div uk-grid class="uk-grid-collapse">
-                    <div class="uk-padding-small">
-                        <img data-src="CPP/images/cpp.png" height="150" width="150" alt="" uk-img>
+        <!-- skills -->
+        <h2 class="uk-heading-divider" id="skills">Skills</h2>
+        <div>
+            <table class="uk-table uk-table-divider uk-position-small">
+                <tbody>
+                    <tr class="uk-text-large">
+                        <td>AtCoder 緑色(1107)</td>
+                    </tr>
+                    <tr class="uk-text-large">
+                        <td>第20回 日本情報オリンピック ランクB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- products -->
+        <h2 class="uk-heading-divider" id="products">Products</h2>
+        <div class="uk-margin-large-left" uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 200;">
+            <div uk-grid class="uk-grid-match">
+                <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left"
+                    href="#modal-ape-x" uk-toggle>
+                    <div class="uk-flex-center">
+                        <img data-src="image/gh-logo.png" width="100%" alt="" uk-img>
                     </div>
-                    <div class="uk-text-break uk-width-2-3">
-                        <h3>C++入門用ドキュメント</h3>
-                        <a class="uk-link-reset marker-webpage" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="./CPP/">ページに飛ぶ</a>
-                        <p>htmlを使ってC++の入門用ページを作っています</p>
-                        <p>(まだまだ開発段階で、今は気が向いたら編集している感じです)</p>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-text-center uk-text-break">
+                        <h3 class=" uk-card-title">Ape-X</h3>
+                        <div>
+                            <span class="marker-lightblue">Python</span>
+                            <span class="marker-lightgreen">機械学習</span>
+                        </div>
+                        <span class=" uk-text-default">
+                            制作日時:2020年12月
+                        </span>
                     </div>
+
+                </a>
+
+                <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left"
+                    href="#modal-hit-blow" uk-toggle>
+                    <div class="uk-flex-center">
+                        <img data-src="image/Discord-Logo-Color.png" width="100%" alt="" uk-img>
+                    </div>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-text-center uk-text-break">
+                        <h3 class=" uk-card-title">数あてBOT</h3>
+                        <div>
+                            <span class="marker-lightblue">Python</span>
+                            <span class="marker-lightgreen">Discord BOT</span>
+                        </div>
+                        <span class=" uk-text-default">
+                            制作日時:2020年9月
+                        </span>
+                    </div>
+                </a>
+
+                <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left"
+                    href="#modal-cpp-ref" uk-toggle>
+                    <div class="uk-flex-center">
+                        <img data-src="CPP/images/cpp.png" width="100%" alt="" uk-img>
+                    </div>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-text-center uk-text-break">
+                        <h3 class=" uk-card-title">C++入門用ドキュメント</h3>
+                        <div>
+                            <span class="marker-lightblue">html</span>
+                        </div>
+                        <span class=" uk-text-default">
+                            制作日時:2021年6月
+                        </span>
+                    </div>
+                </a>
+
+                <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left"
+                    href="#bomber-blocking" uk-toggle>
+                    <div class="uk-flex-center">
+                        <img data-src="image/opensiv3d.png" width="100%" alt="" uk-img>
+                    </div>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-text-center uk-text-break">
+                        <h3 class=" uk-card-title">BomberBlocking</h3>
+                        <div>
+                            <span class="marker-siv3d">OpenSiv3D</span>
+                            <span class="marker-cpp">C++</span>
+                        </div>
+                        <span class=" uk-text-default">
+                            制作日時:2020年5月
+                        </span>
+                    </div>
+                </a>
+
+                <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left"
+                    href="#nn-cpp" uk-toggle>
+                    <div class="uk-flex-center">
+                        <img data-src="image/cpp.png" width="100%" alt="" uk-img>
+                    </div>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-text-center uk-text-break">
+                        <h3 class=" uk-card-title">NN-Cpp(仮称)</h3>
+                        <div>
+                            <span class="marker-cpp">C++</span>
+                            <span class="marker-lightgreen">機械学習</span>
+                        </div>
+                        <span class=" uk-text-default">
+                            制作日時:2021年8月
+                        </span>
+                    </div>
+                </a>
+
+                <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left"
+                    href="#tango-type" uk-toggle>
+                    <div class="uk-flex-center">
+                        <img data-src="image/opensiv3d.png" width="100%" alt="" uk-img>
+                    </div>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-text-center uk-text-break">
+                        <h3 class=" uk-card-title">タイピング単語帳</h3>
+                        <div>
+                            <span class="marker-siv3d">OpenSiv3D</span>
+                            <span class="marker-cpp">C++</span>
+                        </div>
+                        <span class=" uk-text-default">
+                            制作日時:2021年8月
+                        </span>
+                    </div>
+                </a>
+
+                <a class="uk-card uk-card-default uk-padding-small uk-width-1-5 uk-link-reset uk-margin-left"
+                    href="#launcher-2021" uk-toggle>
+                    <div class="uk-flex-center">
+                        <img data-src="image/comb.png" width="100%" alt="" uk-img>
+                    </div>
+                    <hr class="uk-divider-icon">
+                    <div class="uk-text-center uk-text-break">
+                        <h3 class=" uk-card-title">2021年度文化祭ランチャー</h3>
+                        <div>
+                            <span class="marker-siv3d">OpenSiv3D</span>
+                            <span class="marker-cpp">C++</span>
+                        </div>
+                        <span class=" uk-text-default">
+                            制作日時:2021年10月
+                        </span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- products' modals -->
+    <!-- ape-x -->
+    <div id="modal-ape-x" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div uk-grid class="uk-grid-collapse">
+                <div class="uk-padding-small">
+                    <img data-src="image/gh-logo.png" height="150" width="150" alt="" uk-img>
+                </div>
+                <div class="uk-text-break uk-width-2-3">
+                    <h3>Ape-X</h3>
+                    <a class="uk-link-reset marker-black" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer" href="https://github.com/Luke256/Ape-X">GitHub</a>
+                    <a class="uk-link-reset marker-qiita" style="color:white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://qiita.com/Luke02561/items/5dc517b23cd780fde247">Qiita記事</a>
+                    <p>強化学習の手法の一つ、「Ape-X」をKerasというフレームワークを使って実装してみました。</p>
+                    <p>ただ、成功しているわけではなく、まだまだ課題は多いです</p>
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <!-- BomberBlocking -->
-        <div id="bomber-blocking" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div uk-grid class="uk-grid-collapse">
-                    <div class="uk-padding-small">
-                        <img data-src="image/bomber.png" height="150" width="150" alt="" uk-img>
-                    </div>
-                    <div class="uk-text-break uk-width-2-3">
-                        <h3>BomberBlocking</h3>
-                        <a class="uk-link-reset marker-googledrive" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://t.co/K5J1ad7NjX?amp=1">GoogleDrive</a>
-                        <a class="uk-link-reset marker-twitter" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://twitter.com/Luke02561/status/1260825076733075457">ツイート</a>
-                        <p>C++のOpenSiv3Dというライブラリを使って、ゲームを作りました</p>
-                        <p>左側からくる敵を撃ち落としたり壁で守ったりするエンドレスゲームです</p>
-                    </div>
+    <!-- 数あてBOT -->
+    <div id="modal-hit-blow" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div uk-grid class="uk-grid-collapse">
+                <div class="uk-padding-small">
+                    <img data-src="image/Discord-Logo-Color.png" height="150" width="150" alt="" uk-img>
+                </div>
+                <div class="uk-text-break uk-width-2-3">
+                    <h3>数あてBOT</h3>
+                    <a class="uk-link-reset marker-discord" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://discord.com/api/oauth2/authorize?client_id=750658652427255819&permissions=0&scope=bot">Discord</a>
+                    <a class="uk-link-reset marker-qiita" style="color:white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://qiita.com/Luke02561/items/03a2974547ec9c237e08">Qiita記事</a>
+                    <p>Discord上で、「ヒットアンドブロー」というゲームのBOTを制作しました</p>
+                    <p>(稼働していない場合があります)</p>
                 </div>
             </div>
         </div>
+    </div>
 
-
-        <!-- NN-Cpp -->
-        <div id="nn-cpp" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-                <button class="uk-modal-close-default" type="button" uk-close></button>
-                <div uk-grid class="uk-grid-collapse">
-                    <div class="uk-padding-small">
-                        <img data-src="image/cpp.png" height="150" width="150" alt="" uk-img>
-                    </div>
-                    <div class="uk-text-break uk-width-2-3">
-                        <h3>NN-Cpp(仮称)</h3>
-                        <a class="uk-link-reset marker-qiita" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://qiita.com/Luke02561/items/e68948da075893cff43d">Qiita記事1</a>
-                        <a class="uk-link-reset marker-qiita" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://qiita.com/Luke02561/items/74995d9d5f0e20cbf2a0">Qiita記事2</a>
-                        <a class="uk-link-reset marker-qiita" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://qiita.com/Luke02561/items/ee98d6e742febef04731">Qiita記事3</a>
-                        <a class="uk-link-reset marker-twitter" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://twitter.com/Luke02561/status/1421690862539481090?s=20">ツイート</a>
-                        <a class="uk-link-reset marker-black" style="color: white!important;" target="_blank" rel="noopener noreferrer" href="https://github.com/Luke256/CppNN">Github</a>
-                        <p>Pythonで実装されることの多いニューラルネットワークを、C++を使って実装してみました</p>
-                        <p>Ape-Xとは違ってしっかりと動いてくれます</p>
-                    </div>
+    <!-- cppリファレンス -->
+    <div id="modal-cpp-ref" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div uk-grid class="uk-grid-collapse">
+                <div class="uk-padding-small">
+                    <img data-src="CPP/images/cpp.png" height="150" width="150" alt="" uk-img>
+                </div>
+                <div class="uk-text-break uk-width-2-3">
+                    <h3>C++入門用ドキュメント</h3>
+                    <a class="uk-link-reset marker-webpage" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer" href="./CPP/">ページに飛ぶ</a>
+                    <p>htmlを使ってC++の入門用ページを作っています</p>
+                    <p>(まだまだ開発段階で、今は気が向いたら編集している感じです)</p>
                 </div>
             </div>
         </div>
-        
-        <!-- manu bar -->
-        <div id="navigation" uk-offcanvas="mode: reveal;">
-            <div class="uk-offcanvas-bar uk-flex uk-flex-columns">
-                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-                    <li><a href="#aboutme" uk-scroll>About Me</a></li>
-                    <li><a href="#useablelangages" uk-scroll>Useable Langages</a></li>
-                    <li><a href="#skills" uk-scroll>Skills</a></li>
-                    <li><a href="#products" uk-scroll>Products</a></li>
-                </ul>
+    </div>
+
+
+    <!-- BomberBlocking -->
+    <div id="bomber-blocking" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div uk-grid class="uk-grid-collapse">
+                <div class="uk-padding-small">
+                    <img data-src="image/bomber.png" height="150" width="150" alt="" uk-img>
+                </div>
+                <div class="uk-text-break uk-width-2-3">
+                    <h3>BomberBlocking</h3>
+                    <a class="uk-link-reset marker-googledrive" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer" href="https://t.co/K5J1ad7NjX?amp=1">GoogleDrive</a>
+                    <a class="uk-link-reset marker-twitter" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/Luke02561/status/1260825076733075457">ツイート</a>
+                    <p>C++のOpenSiv3Dというライブラリを使って、ゲームを作りました</p>
+                    <p>左側からくる敵を撃ち落としたり壁で守ったりするエンドレスゲームです</p>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- copy right -->
-        <div class="uk-container uk-text-center">&copy;2021 Luke</div>
-    </body>
+
+    <!-- NN-Cpp -->
+    <div id="nn-cpp" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div uk-grid class="uk-grid-collapse">
+                <div class="uk-padding-small">
+                    <img data-src="image/cpp.png" height="150" width="150" alt="" uk-img>
+                </div>
+                <div class="uk-text-break uk-width-2-3">
+                    <h3>NN-Cpp(仮称)</h3>
+                    <a class="uk-link-reset marker-qiita" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://qiita.com/Luke02561/items/e68948da075893cff43d">Qiita記事1</a>
+                    <a class="uk-link-reset marker-qiita" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://qiita.com/Luke02561/items/74995d9d5f0e20cbf2a0">Qiita記事2</a>
+                    <a class="uk-link-reset marker-qiita" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://qiita.com/Luke02561/items/ee98d6e742febef04731">Qiita記事3</a>
+                    <a class="uk-link-reset marker-twitter" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/Luke02561/status/1421690862539481090?s=20">ツイート</a>
+                    <a class="uk-link-reset marker-black" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer" href="https://github.com/Luke256/CppNN">Github</a>
+                    <p>Pythonで実装されることの多いニューラルネットワークを、C++を使って実装してみました</p>
+                    <p>Ape-Xとは違ってしっかりと動いてくれます</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tango-Type -->
+    <div id="tango-type" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div uk-grid class="uk-grid-collapse">
+                <div class="uk-padding-small">
+                    <img data-src="image/tango_type.png" height="150" width="150" alt="" uk-img>
+                </div>
+                <div class="uk-text-break uk-width-2-3">
+                    <h3>タイピング単語帳</h3>
+                    <a class="uk-link-reset marker-googledrive" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://drive.google.com/file/d/1gBL2YVldefRTShq84SUwskJcitMpgtxF/view?usp=sharing">Google Drive</a>
+                    <a class="uk-link-reset marker-black" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer" href="https://github.com/Luke256/Tango_Typing">Github</a>
+                    <a class="uk-link-reset marker-webpage" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer" href="https://www.gakuryokuup.com/jusyou-kekka">ページに飛ぶ</a>
+                    <p>第二回学力向上アプリコンテストに出したところ、デザイン優秀賞を取った作品です</p>
+                    <p>GoogleDriveからダウンロードできます</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Launcher-2021 -->
+    <div id="launcher-2021" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div uk-grid class="uk-grid-collapse">
+                <div class="uk-padding-small">
+                    <img data-src="image/comb.png" height="150" width="150" alt="" uk-img>
+                </div>
+                <div class="uk-text-break uk-width-2-3">
+                    <h3>2021年度文化祭ランチャー</h3>
+                    <a class="uk-link-reset marker-googledrive" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://drive.google.com/file/d/1snTTNA6lSmDbBmbhEclpfqJQtCOtE_jj/view?usp=sharing">Google Drive(Mac)</a>
+                    <a class="uk-link-reset marker-googledrive" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://drive.google.com/file/d/1dxl7y9DipG09qTK2WwcG0GlZimCXX2XN/view?usp=sharing">Google Drive(Win)</a>
+                    <a class="uk-link-reset marker-black" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer" href="https://github.com/Luke256/Launcher2021">Github</a>
+                    <a class="uk-link-reset marker-twitter" style="color: white!important;" target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://twitter.com/KaijoComputer/status/1456402967125315589?s=20">ツイート</a>
+                    <p>2021年度の文化祭で出展したランチャーと音楽プレイヤー、3DCGViewer(beta)です</p>
+                    <p>GoogleDriveからダウンロードできます</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- manu bar -->
+    <div id="navigation" uk-offcanvas="mode: reveal;">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-columns">
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li><a href="#aboutme" uk-scroll>About Me</a></li>
+                <li><a href="#useablelangages" uk-scroll>Useable Langages</a></li>
+                <li><a href="#skills" uk-scroll>Skills</a></li>
+                <li><a href="#products" uk-scroll>Products</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- copy right -->
+    <div class="uk-container uk-text-center">&copy;2021 Luke</div>
+</body>
+
 </html>
