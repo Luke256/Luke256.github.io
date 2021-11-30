@@ -1,0 +1,499 @@
+<!--
+
+    こんにちは！
+    このコメントが見られてるということは、君はある程度の知識を持った人だね！
+    (何もないけど)
+    あ、あった
+    途中、1pxで書かれてアンダーバー_に見えるところがあったよね！
+    ここを見ればなんて書いてあるかわかるかも！
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="uikit-3.6.5/css/uikit.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css.css">
+    <link rel="shortcut icon" href="images/python.png">
+
+    <title>Python特別講座</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+    <!-- template -->
+    <header>
+        <div uk-sticky class="uk-sticky head">
+            <div uk-grid class="uk-margin-small-left">
+                <div class=" uk-margin-auto-vertical">
+                    <button class="uk-button uk-button-default uk-margin-auto-vertical"
+                        style="padding-left: 10px; padding-right: 10px; border:0px;" uk-toggle="target: #side-bar">
+                        <span uk-icon="icon: menu; ratio: 2" style="color: white;"></span>
+                    </button>
+                </div>
+
+                <!-- <a uk-grid class="uk-link-reset" href="../index.html"> -->
+                <div class="uk-padding-small uk-margin-small-left">
+                    <img data-src="images/python.png" width="50px" height="50px" uk-img>
+                </div>
+                <h2 class="uk-padding-small uk-margin-auto-vertical" style="color: white;">Python特別講座</h2>
+                <!-- </a> -->
+            </div>
+        </div>
+    </header>
+    <div id="side-bar" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" id="part-list">
+                <!-- Jump Menu -->
+                <li>
+                    <h2>Python特別講座</h2>
+                </li>
+                <li><a href="#introduction">はじめに</a></li>
+                <li><a href="#charm">Pythonの魅力</a></li>
+                <li><a href="#env">環境作成</a></li>
+                <li><a href="#example">Pythonコードの例</a></li>
+                <li><a href="#print">出力(表示)</a></li>
+                <li><a href="#input">入力を受け取る</a></li>
+                <li><a href="#if">条件で分岐させる</a></li>
+                <li><a href="#calc">計算をする</a></li>
+                <li><a href="#loop">ループさせる</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- template end -->
+
+    <!-- Start of Main Content -->
+    <!-- margin-left: 20%; margin-right: 20%;  -->
+    <main id="main-content" style="margin-left: 20%; margin-right: 20%; margin-top:50px;">
+        <h2 class="uk-heading-divider" id="introduction">はじめに</h2>
+        <p>
+            情報科からPythonの講習を依頼されたので、このページを教材に講習を行なっていきます。
+        </p>
+        <h3 class="uk-heading-bullet">学ぶこと</h3>
+        <p>
+            この講習では、主に以下のようなことを学んでいきます
+        </p>
+        <ul class="uk-list uk-list-decimal">
+            <li>Pythonの魅力</li>
+            <li>Pythonの手ほどき
+                <ul>
+                    <li>出力(表示)</li>
+                    <li>入力を受け取る</li>
+                    <li>条件で分岐させる</li>
+                    <li>計算をする</li>
+                    <li>ループさせる</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2 class="uk-heading-divider" id="charm">Pythonの魅力</h2>
+        <p>
+            Pythonは多くあるプログラミング言語のうち、人気の高い言語の一つです。
+            プログラミング初心者でもかなり手軽に始められ、簡単なプログラムを書くことができます。
+            また、豊富なライブラリがあり、それらを使うことで様々なことを行うことができます。
+        </p>
+        <p>
+            例えば、YoutubeやDropBoxはPythonで開発されたサービスです。
+            さらには、ビッグデータや機械学習などもPythonの得意分野です(偏見)。
+        </p>
+
+        <h2 class="uk-heading-divider" id="tutorial">Pythonの手ほどき</h2>
+        <p>
+            では、ここからはPythonの簡単な分野の説明をしていきましょう
+        </p>
+        <h3 class="uk-heading-bullet" id="env">環境作成</h3>
+            <p>
+                ではまず、この講座用のワークスペースを作りましょう。<br>
+                最初に、適当な名前のフォルダを作り、それをVSCodeで開きます。ここに、Pythonのコードが書かれたファイルを作成、実行していきます。<br>
+                (ここでは、PythonLessonという名前で作成します)<br>
+                以下のようになると思います。
+            </p>
+            <img src="images/image1.png" width="80%" alt="PythonLessonというファイルがVSCodeで開かれている" uk-image>
+
+            <p>
+                次に、「&#x2318;+N」で新しいファイルを作成します。<br>
+                それを、「&#x2318;+S」で保存します。名前は「Lesson.py」にしましょう。<br>
+                末尾の「.py」を忘れないようにしましょう。<br>
+                最後に、「Shift+Ctrol+^」でターミナルを開きます。<br>
+                ここで出てきたものを使ってPythonのコードを実行します。<br>
+                以下のようになれば、環境作成は完了です
+            </p>
+            <img src="images/image2.png" width="80%" alt="Lesson.pyというフォルダが作成され、開かれている。下部にターミナル" uk-image>
+        <h3 class="uk-heading-bullet" id="example">Pythonコードの例</h3>
+        <p>
+            ではようやくPythonの説明に入っていきます。<br>
+            まずは、この講習で使うプログラムを一度見せます。
+            次のコードは、永遠にじゃんけんをし続けるソースコードです。
+        </p>
+        <program>
+# -*- coding: utf-8 -*-
+import random
+
+while True:
+    print(" [0]グー")
+    print(" [1]チョキ")
+    print(" [2]パー")
+    player = int(input("あなたの手は？"))
+    if player == 0:
+        print("あなたはグーを出しました")
+    elif player == 1:
+        print("あなたはチョキを出しました")
+    elif player == 2:
+        print("あなたはパーを出しました")
+    else:
+        print("0~2の数字を入力してください")
+        continue
+
+    com = random.randint(0,2)
+    if com == 0:
+        print("コンピュータはグーを出しました")
+    elif com == 1:
+        print("コンピュータはチョキを出しました")
+    elif com == 2:
+        print("コンピュータはパーを出しました")
+
+    com += 3
+    if (com - player) % 3 == 1:
+        print("あなたの勝ちです")
+    elif (com - player) % 3 == 2:
+        print("あなたの負けです")
+    else:
+        print("あいこです")
+
+    print("もう一度？")
+    print(" [0]はい")
+    print(" [1]いいえ")
+    again = int(input(":"))
+    if again == 0:
+        print("じゃんけんをします")
+    else:
+        print("じゃんけんをしません")
+        break
+        </program>
+        <p>
+            これを、Lesson.pyに記述して、下のターミナルに以下コマンドを入力して実行してみましょう。<br>
+        </p>
+        <program>
+python Lesson.py
+        </program>
+        <p>
+            では、Pythonを学びながら、このプログラムをかけるようにしてみましょう。<br>
+        </p>
+
+        <h3 class="uk-heading-bullet" id="print">出力(表示)</h3>
+        <p>
+            学習の前に、先ほどのファイルとは別に新しいファイルを作りましょう。<br>
+            ここでは「Learn.py」という名前で保存します。<br>
+            これに、色々なコードを記述し、最終的にはLesson.pyと同じようなコードを書きます。<br>
+        </p>
+        <p>
+            では説明に入ります。<br>
+            まずは、プログラミングのはじめの一歩、出力を行うコードを書きます。<br>
+            Pythonでは、「print」という関数を使います。<br>
+            では実際にコードを見てみましょう。
+        </p>
+        <program>
+# -*- coding: utf-8 -*-
+
+print("[0]グー")
+print("[1]チョキ")
+print("[2]パー")
+        </program>
+        実行結果
+        <program>
+[0]グー
+[1]チョキ
+[2]パー
+        </program>
+        <p>
+            これで、出力ができるようになりました。
+        </p>
+        <p>
+            ちなみに、一番上のものはpythonに「これはUTF-8で書かれているよ〜」ということを教えるためのものです。おまじない程度に覚えておくといいでしょう。<br>
+            また、「#」以降はコメントとして読み込まれます。コメントはプログラムには一切関係しません<br>
+        </p>
+        <h3 class="uk-heading-bullet" id="input">入力を受け取る</h3>
+        <p>
+            次に、入力を受け取ってみましょう。
+            これは、「input」という関数を使います。
+            この関数は、文字列を受け取ります。
+            ここでは、「あなたの手は？」という文字列を出力します。
+            そして、「input」関数を使って、入力を受け取ります。
+        </p>
+        <p>
+            また、入力には、それの受け皿となるものが必要です。
+            プログラミングでは、そのようなものを「変数」といいます。
+            ここでは、「player」という変数に入力を代入します。
+            これにより、「player」には、入力された数字が代入されます。
+            これを、プログラムの中で使うようにします。
+        </p>
+        <p>
+            では、プログラムを書いていきましょう。
+            先ほどのプログラムに追記する形で書きます。
+        </p>
+        <program>
+# 出力のプログラム(省略)
+
+# 入力を受け取る
+player = int(input("あなたの手は？"))　# "あなたの手は？"は省略可能
+
+print(player)
+        </program>
+        実行結果(1と入力)
+        <program>
+あなたの手は？1
+1
+        </program>
+        <p>
+            ソースコードでは、input関数をint()で囲んでいます。こうすることで、文字列だった入力を整数に変換しています。(こうすることで後の処理が楽になります)<br>
+            これで、入力が受け取れるようになりました。
+        </p>
+
+        <h3 class="uk-heading-bullet" id="if">条件で分岐させる</h3>
+        <p>
+            次は、受け取った数値に応じてグー、チョキ、パーを判別できるようにしましょう。<br>
+            このような処理を条件分岐といい、Pythonではif文というものを使います。ここから少し複雑になって行きますが、頑張って行きましょう。<br>
+            Pythonでは、if文は次のように書きます。
+        </p>
+        <program>
+if 条件式1 :
+    条件1を満たす場合の処理
+elif 条件式2 :
+    条件式1は満たさないが、条件式2は満たす場合の処理
+else:
+    どの条件式も満たさない場合
+        </program>
+        <p>
+            条件式は、簡単に説明すると「2つの値を比較した結果」です(例外は多いですが、基本的な意味はこれです)。つまり、同値か、大きいか小さいか、といったものです。<br>
+            基本的なものは6種類あり、それぞれ以下のように書きます。
+        </p>
+        <table class="uk-table uk-table-divider uk-width-1-2 uk-margin-left">
+            <thead>
+                <tr>
+                    <th>条件式</th>
+                    <th>意味</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>x == y</td>
+                    <td>xとyが同じ値かどうか</td>
+                </tr>
+                <tr>
+                    <td>x != y</td>
+                    <td>xとyが違う値かどうか</td>
+                </tr>
+                <tr>
+                    <td>x > y</td>
+                    <td>xがyより大きいかどうか</td>
+                </tr>
+                <tr>
+                    <td>x < y</td>
+                    <td>xがyより小さいかどうか</td>
+                </tr>
+                <tr>
+                    <td>x >= y</td>
+                    <td>xがy以上かどうか</td>
+                </tr>
+                <tr>
+                    <td>x <= y</td>
+                    <td>xがy以下かどうか</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            また、if文の「elif」の部分は0個以上書くことができます。<br>
+            では、if文を使って受け取った数字がどれに該当するかを判別しましょう。
+        </p>
+        <program>
+# 出力のプログラム(省略)
+
+# 入力のプログラム(省略)
+
+if player == 0:
+    print("グー")
+elif player == 1:
+    print("チョキ")
+elif player == 2:
+    print("パー")
+else:
+    print("0~2を入力してください")
+        </program>
+        実行結果(1と入力)
+        <program>
+チョキ
+        </program>
+        <p>
+            これで、条件分岐ができました。
+        </p>
+        <p>
+            次に、コンピュータ側の手も決めましょう。まず、乱数生成器を使うため、下のように追記します。
+        </p>
+        <program>
+# -*- coding: utf-8 -*-
+import random
+
+# ...
+        </program>
+        <p>
+            こうすることで、乱数が使えるようになりました。あとはプレイヤー入力の部分を少し変えて、あとは先ほどと同じです。<br>
+            コンピュータの手はcomという変数に入れておきます
+        </p>
+        <program>
+# 入力を受け取る(プレイヤー)
+
+com = random.randint(0,2)
+if com == 0:
+    print("コンピュータはグーを出しました")
+elif com == 1:
+    print("コンピュータはチョキを出しました")
+elif com == 2:
+    print("コンピュータはパーを出しました")
+        </program>
+        <p>
+            これで、コンピュータがグー、チョキ、パーのいずれかを出しています。<br>
+            これで、どちらが勝ったかを判別しましょう。
+        </p>
+
+        <h3 class="uk-heading-bullet" id="calc">計算をする</h3>
+        <p>
+            さて、ジャンケンの勝ち負けはif文で9通り全てを検証する方法もありますが、今回は少し頭の良い方法を使います。<br>
+            コンピュータの手の数値に3を足して、プレイヤーの手の数値との差を取り、それを3で割った余りで判別します(1なら勝ち、2なら負け)。
+        </p>
+        <p>
+            Pythonでの計算は、「x + y」という形で行うことができます。<br>
+            この中の「+」を演算子といい、代表的なものには以下のものがあります。
+        </p>
+        <table class="uk-table uk-table-divider uk-width-1-2 uk-margin-left">
+            <thead>
+                <tr>
+                    <th>演算子</th>
+                    <th>意味</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>+</td>
+                    <td>和</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>差</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>積</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>商</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>剰余(あまり)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            では、これらを使って、演算を行い、勝ち負けの判定をしていきましょう。
+        </p>
+        <program>
+# 出力(省略)
+
+# 入力(プレイヤー)
+
+# コンピュータの手を決める
+
+
+com += 3 # 特殊!(複合演算子といい、演算と代入を同時に行います)
+if (com - player) % 3 == 1:
+    print("あなたの勝ちです")
+elif (com - player) % 3 == 2:
+    print("あなたの負けです")
+else:
+    print("あいこです")
+        </program>
+        <p>
+            これで、演算ができるようになりました。
+        </p>
+
+        <h3 class="uk-heading-bullet" id="loop">ループさせる</h3>
+        <p>
+            ここまでのプログラムでも、じゃんけんとしては十分に機能しますが、全体の処理をループさせて、複数回のゲームを行うこともできます。<br>
+            これを「繰り返し」といい、「while文」というものを使います。次のような感じです。
+        </p>
+        <program>
+while 条件式:
+    ループさせる処理
+        </program>
+        <p>
+            このループは、条件式が満たされる限り、ループさせる処理を繰り返します。<br>
+            ここでは、この条件式は「True」として無限ループさせて、プレイヤーの操作の後に「break」という文によって強制的にループから出させます。
+        </p>
+        <p>
+            さて、ここでwhile文を書くとなると、今まで書いたコードの全ての先頭にタブを入れる必要があります、これは面倒なので、以下のソースコードをコピーしてください。
+            (今までのコードのまとめです)
+        </p>
+        <program>
+# -*- coding: utf-8 -*-
+import random
+
+while True: # 無限ループさせる
+    print(" [0]グー")
+    print(" [1]チョキ")
+    print(" [2]パー")
+    player = int(input("あなたの手は？"))
+    if player == 0:
+        print("あなたはグーを出しました")
+    elif player == 1:
+        print("あなたはチョキを出しました")
+    elif player == 2:
+        print("あなたはパーを出しました")
+    else:
+        print("0~2の数字を入力してください")
+        continue
+
+    com = random.randint(0,2)
+    if com == 0:
+        print("コンピュータはグーを出しました")
+    elif com == 1:
+        print("コンピュータはチョキを出しました")
+    elif com == 2:
+        print("コンピュータはパーを出しました")
+
+    com += 3
+    if (com - player) % 3 == 1:
+        print("あなたの勝ちです")
+    elif (com - player) % 3 == 2:
+        print("あなたの負けです")
+    else:
+        print("あいこです")
+        </program>
+        <p>
+            これで、ループを使って、複数回のゲームを行うことができます。<br>
+            他にも、ループさせる方法として、「for文」というものがあります。興味のある人は調べてみると良いでしょう(こちらの方が良く使われます)。
+        </p>
+        <p>
+            さて、これで、Pythonの基本的な処理はかけるようになりました。しかし、まだこのじゃんけんゲームには足りないものがあります。ゲーム終了判定です。<br>
+            最後に、この講座の最後に、「じゃんけんゲームを終了する」という文を追加していきます。これは自分でやってみましょう。
+        </p>
+        <p>
+            ヒント:<br>
+            ループを強制終了させるには、「break」と書いてあげると良いでしょう。
+        </p>
+
+    </main>
+
+    <footer style="padding-top:5px; padding-bottom: 5px; font-size: 12px;">
+        &copy; 2021 片山結太 (≥・ω・≤)ﾆｬｰ
+    </footer>
+
+</body>
+</html>

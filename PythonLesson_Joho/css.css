@@ -1,0 +1,81 @@
+.head{
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.uk-card-primary{
+    background-color: #65ABF2;
+    color: white;
+}
+
+p{
+    color: inherit!important;
+}
+
+.uk-text-warning{
+    color:#FFBE5B!important;
+}
+
+.warning-main{
+    color:#FFAC30;
+}
+
+html{
+    scroll-padding-top: 85px; /* 固定ヘッダの高さ分 */
+}
+
+.message-alice-name{
+    float: left;
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+.message-alice-name  p{
+    margin: 0;
+    padding-right:0px;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.message-common{
+    color: #444;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 1.2em;
+    border: 3px solid #eee;
+    background-color: #fff;
+    /* border-radius: 5px; */
+}
+
+.message-common p{
+    margin-bottom:0;
+}
+
+.message-brown-name{
+    margin-left: 4px;
+    margin-top: -1px;
+    float: right;
+    width: 70px;
+    height: 70px;
+    position: relative
+}
+
+.message-brown-name  p{
+    margin: 0;
+    padding-left:0px;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.message-container{
+    margin-bottom:50px;
+}
+
+footer{
+    text-align: center;
+}
